@@ -1,3 +1,4 @@
+/* 🎀 Reset y estilo base */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -11,25 +12,29 @@ body {
   animation: fadeIn 2s ease-in;
 }
 
+/* ✨ Título de bienvenida */
 .intro h1 {
   font-size: 2.5em;
   color: #ff69b4;
   margin-bottom: 0.2em;
 }
 
+/* 🌼 Subtítulo */
 .intro p {
   font-size: 1.2em;
   margin-bottom: 1.5em;
 }
 
+/* 📸 Imagen de cumpleaños */
 .photo-section img {
-  width: 200px;
+  width: 200px;         /* ← Cambia este valor para ajustar el tamaño de la imagen */
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   margin-top: 1em;
 }
 
+/* 💬 Mensaje personal */
 .message {
   margin: 2em auto;
   max-width: 600px;
@@ -40,6 +45,7 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+/* 🎁 Botón de acción */
 .btn {
   display: inline-block;
   padding: 0.8em 1.5em;
@@ -52,29 +58,4 @@ body {
   transition: all 0.3s ease;
 }
 .btn:hover {
-  background-color: #ff1493;
-  transform: scale(1.05);
-}
-
-.footer {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  font-size: 0.9em;
-  color: #888;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@media (max-width: 150px) {
-  .intro h1 {
-    font-size: 2em;
-  }
-  .message {
-    font-size: 1em;
-    padding: 1em;
-  }
-}
+ 
