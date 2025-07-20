@@ -1,4 +1,4 @@
-// Animación entrada de título
+// Animación de entrada del título
 gsap.from(".intro h1", {
   duration: 1.5,
   y: -100,
@@ -15,9 +15,18 @@ gsap.from(".intro p", {
   ease: "power2.out"
 });
 
+// Animación del botón de regalo
+gsap.from(".btn", {
+  delay: 1,
+  duration: 1.2,
+  y: 30,
+  opacity: 0,
+  ease: "power1.out"
+});
+
 // Animación de la imagen
 gsap.from(".photo-section img", {
-  delay: 1.2,
+  delay: 1.8,
   duration: 2,
   scale: 0.8,
   opacity: 0,
@@ -26,7 +35,7 @@ gsap.from(".photo-section img", {
 
 // Animación del mensaje
 gsap.from(".message", {
-  delay: 2,
+  delay: 2.4,
   duration: 1.5,
   opacity: 0,
   y: 50,

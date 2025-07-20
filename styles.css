@@ -27,7 +27,7 @@ body {
 
 /* 📸 Imagen de cumpleaños */
 .photo-section img {
-  width: 200px;         /* ← Cambia este valor para ajustar el tamaño de la imagen */
+  width: 200px;         /* ← Ajusta este valor según el tamaño que prefieras */
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
@@ -57,5 +57,48 @@ body {
   margin-top: 1em;
   transition: all 0.3s ease;
 }
+
+/* 💫 Botón cuando se pasa el cursor */
 .btn:hover {
- 
+  background-color: #ff1493;
+  transform: scale(1.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* 👆 Botón cuando se presiona */
+.btn:active {
+  transform: scale(0.97);
+  box-shadow: none;
+}
+
+/* 🖋️ Nota flotante */
+.footer {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 0.9em;
+  color: #888;
+}
+
+/* 🌈 Animación de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* 📱 Estilos para dispositivos móviles */
+@media (max-width: 480px) {
+  .intro h1 {
+    font-size: 2em;
+  }
+
+  .message {
+    font-size: 1em;
+    padding: 1em;
+  }
+
+  .photo-section img {
+    width: 100%;         /* ← En móviles, la imagen ocupará todo el ancho */
+    border-radius: 8px;
+  }
+}
