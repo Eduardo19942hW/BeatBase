@@ -23,7 +23,7 @@ body {
 }
 
 .photo-section img {
-  width: 200px;
+  width: 200px;      /* Cambia este valor al tamaño que prefieras */
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
