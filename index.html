@@ -24,10 +24,10 @@
   </section>
 
   <main class="container">
-    <header class="intro">
-      <h1>✨ Feliz Cumpleaños Meli ✨</h1>
-      <p>Mi regalo no huele a flores… pero sí vibra con bits de cariño computacional 🎈💻</p>
-    </header>
+    <header class="intro" id="saludo">
+  <h1>✨ Feliz Cumpleaños Meli ✨</h1>
+  <p>Mi regalo no huele a flores… pero sí vibra con bits de cariño computacional 🎈💻</p>
+  </header>
 
     <section class="photo-section">
       <img src="images/mel_pastel_2.jpg" alt="Tu sonrisa iluminando este día" />
@@ -60,7 +60,6 @@
 
     <section id="final-message" class="final-message"></section>
 
-    <footer class="footer">Hecho con cariño por Eduardo 💎</footer>
   </main>
 
   <script src="script.js"></script>
@@ -69,7 +68,7 @@
   <script>
     function abrirRegalo() {
       document.getElementById("bg-music").play();
-      const destino = document.getElementById("mensaje");
+      const destino = document.getElementById("saludo");
       if (destino) {
         destino.scrollIntoView({ behavior: "smooth" });
       }
