@@ -146,3 +146,24 @@ body {
   50%  { background: linear-gradient(to bottom, #ffe4e1, #f0fff0); }
   100% { background: linear-gradient(to bottom, #fff0f5, #ffe4e1); }
 }
+
+.cover {
+  padding: 4em 2em;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  max-width: 600px;
+  margin: 6em auto;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 2s ease-in;
+}
+.cover h1 {
+  font-size: 2em;
+  color: #ff1493;
+  margin-bottom: 0.5em;
+}
+.cover p {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 1.5em;
+}

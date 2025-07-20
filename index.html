@@ -16,15 +16,18 @@
     Tu navegador no soporta audio embebido.
   </audio>
 
+  <!-- Portada con botón principal -->
+  <section class="cover">
+    <h1>🎁 ¡Tienes un regalo especial, Meli!</h1>
+    <p>Haz clic para abrirlo y comenzar esta celebración digital ✨</p>
+    <a class="btn" onclick="abrirRegalo()">Abrir regalo</a>
+  </section>
+
   <main class="container">
     <header class="intro">
-      <h1>✨ Feliz Cumpleaños Meli✨</h1>
-      <p>Mi regalo no huele a flores… pero sí vibra con bits de cariño computacional🎈💻</p>
+      <h1>✨ Feliz Cumpleaños Meli ✨</h1>
+      <p>Mi regalo no huele a flores… pero sí vibra con bits de cariño computacional 🎈💻</p>
     </header>
-
-    <a href="#mensaje" class="btn" role="button" aria-label="Abrir regalo" onclick="document.getElementById('bg-music').play();">
-      🎁 Abrir mi regalo
-    </a>
 
     <section class="photo-section">
       <img src="images/mel_pastel_2.jpg" alt="Tu sonrisa iluminando este día" />
@@ -32,13 +35,14 @@
 
     <section class="message" id="mensaje">
       <p>
-        Cada foto tiene su historia, y cada historia tiene un pedacito de lo que nos une. Que este cumpleaños venga cargado de sonrisas, sorpresas simples y todo lo que te hace feliz. Porque sí… me acordé, y quise celebrarlo como tú te mereces—con estilo y buena vibra."
-        ¡Feliz Nueva Vuelta al Sol! 🎉  
+        Cada foto tiene su historia, y cada historia tiene un pedacito de lo que nos une.  
+        Que este cumpleaños venga cargado de sonrisas, sorpresas simples y todo lo que te hace feliz.  
+        Porque sí… me acordé, y quise celebrarlo como tú te mereces—con estilo y buena vibra.  
+        <strong>¡Feliz Nueva Vuelta al Sol! 🎉</strong>
       </p>
     </section>
 
     <section class="gallery">
-      <!-- Imágenes del collage -->
       <div class="item"><img src="images/a.jpg" alt="Recuerdo a" /></div>
       <div class="item"><img src="images/b.jpg" alt="Recuerdo b" /></div>
       <div class="item"><img src="images/c.jpg" alt="Recuerdo c" /></div>
@@ -61,7 +65,22 @@
 
   <script src="script.js"></script>
 
+  <!-- Script decorativo y funcional -->
   <script>
+    function abrirRegalo() {
+      document.getElementById("bg-music").play();
+      const destino = document.getElementById("mensaje");
+      if (destino) {
+        destino.scrollIntoView({ behavior: "smooth" });
+      }
+      const portada = document.querySelector(".cover");
+      if (portada) {
+        portada.style.transition = "opacity 1s ease";
+        portada.style.opacity = "0";
+        setTimeout(() => portada.style.display = "none", 1000);
+      }
+    }
+
     window.addEventListener("DOMContentLoaded", () => {
       setInterval(() => {
         const deco = document.createElement("div");
