@@ -7,12 +7,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
-  <audio id="bg-music" loop>
-  <source src="audio/beele-romantica.mp3" type="audio/mpeg">
-</audio>
-<a href="#mensaje" class="btn" onclick="document.getElementById('bg-music').play();">
-  🎁 Abrir mi regalo
-</a>
+
+  <!-- 🎵 Controles de música -->
+  <audio id="bg-music" controls loop style="margin-top: 1em;">
+    <source src="audio/beele-romantica.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio embebido.
+  </audio>
 
   <div class="container">
     <div class="intro">
@@ -20,7 +20,10 @@
       <p>Hoy no te traigo flores… te traigo magia digital hecha por mí 🌸💻</p>
     </div>
 
-    <a href="#mensaje" class="btn">🎁 Abrir mi regalo</a>
+    <!-- 🎁 Botón único para activar audio -->
+    <a href="#mensaje" class="btn" onclick="document.getElementById('bg-music').play();">
+      🎁 Abrir mi regalo
+    </a>
 
     <div class="photo-section">
       <img src="images/mel_pastel_2.jpg" alt="Tu sonrisa iluminando este día" />
@@ -34,9 +37,33 @@
       </p>
     </div>
 
+    <!-- 📸 Galería / Collage de recuerdos -->
+    <div class="gallery">
+      <img src="images/mel1.jpg" alt="Recuerdo 1" />
+      <img src="images/mel2.jpg" alt="Recuerdo 2" />
+      <img src="images/mel3.jpg" alt="Recuerdo 3" />
+      <video controls src="images/video1.mp4"></video>
+    </div>
+
     <div class="footer">Hecho con cariño por Eduardo 💎</div>
   </div>
 
   <script src="script.js"></script>
+
+  <!-- 🌸 Pétalos cayendo -->
+  <script>
+    setInterval(() => {
+      const petal = document.createElement("div");
+      petal.textContent = "🌸";
+      petal.style.position = "fixed";
+      petal.style.left = Math.random() * window.innerWidth + "px";
+      petal.style.top = "-50px";
+      petal.style.fontSize = "24px";
+      petal.style.opacity = "0.8";
+      petal.style.animation = "fall 5s linear";
+      document.body.appendChild(petal);
+      setTimeout(() => petal.remove(), 5000);
+    }, 600);
+  </script>
 </body>
 </html>

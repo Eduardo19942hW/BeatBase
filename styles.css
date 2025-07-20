@@ -12,29 +12,25 @@ body {
   animation: fadeIn 2s ease-in;
 }
 
-/* ✨ Título de bienvenida */
 .intro h1 {
   font-size: 2.5em;
   color: #ff69b4;
   margin-bottom: 0.2em;
 }
 
-/* 🌼 Subtítulo */
 .intro p {
   font-size: 1.2em;
   margin-bottom: 1.5em;
 }
 
-/* 📸 Imagen de cumpleaños */
 .photo-section img {
-  width: 200px;         /* ← Ajusta este valor según el tamaño que prefieras */
+  width: 200px;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   margin-top: 1em;
 }
 
-/* 💬 Mensaje personal */
 .message {
   margin: 2em auto;
   max-width: 600px;
@@ -45,7 +41,6 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* 🎁 Botón de acción */
 .btn {
   display: inline-block;
   padding: 0.8em 1.5em;
@@ -57,21 +52,16 @@ body {
   margin-top: 1em;
   transition: all 0.3s ease;
 }
-
-/* 💫 Botón cuando se pasa el cursor */
 .btn:hover {
   background-color: #ff1493;
   transform: scale(1.05);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
-
-/* 👆 Botón cuando se presiona */
 .btn:active {
   transform: scale(0.97);
   box-shadow: none;
 }
 
-/* 🖋️ Nota flotante */
 .footer {
   position: fixed;
   bottom: 10px;
@@ -80,25 +70,40 @@ body {
   color: #888;
 }
 
-/* 🌈 Animación de entrada */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
-/* 📱 Estilos para dispositivos móviles */
+@keyframes fall {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(100vh); }
+}
+
+/* 📸 Galería / collage */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1em;
+  margin: 2em;
+}
+.gallery img, .gallery video {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* 📱 Móviles */
 @media (max-width: 480px) {
   .intro h1 {
     font-size: 2em;
   }
-
   .message {
     font-size: 1em;
     padding: 1em;
   }
-
   .photo-section img {
-    width: 100%;         /* ← En móviles, la imagen ocupará todo el ancho */
+    width: 100%;
     border-radius: 8px;
   }
 }
